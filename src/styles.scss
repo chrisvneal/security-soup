@@ -9,6 +9,10 @@ $section-border__color: #e2e2e2;
 
 section {
   margin-bottom: 15px;
+
+  h2 {
+    margin-bottom: 15px;
+  }
 }
 
 
@@ -24,7 +28,7 @@ textarea {
   width: 100%;
 }
 
-.tasks li {
+.tasks li, .officers li {
   border-bottom: 1px solid $section-border__color;
   margin-bottom: 15px;
 }

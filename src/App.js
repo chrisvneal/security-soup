@@ -1,6 +1,6 @@
 import React from "react";
 import Notes from "./components/Notes";
-import OfficerList from "./components/OfficerList";
+import Officers from "./components/Officers";
 import Tasks from "./components/Tasks";
 import { officers, supTasks } from "./data";
 
@@ -24,7 +24,7 @@ const App = () => {
         <section className="section-border">
           <h2>Officers</h2>
 
-          <OfficerList officers={officers} />
+          <Officers officers={officers} />
         </section>
         <section className="section-border">
           <h2>Site Stats</h2>
