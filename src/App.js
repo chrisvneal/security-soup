@@ -5,12 +5,30 @@ import ListItems from "./components/ListItems";
 import "./styles.scss";
 
 const officers = [
-  "Mike Lowry",
-  "Mike Jones",
-  "Wendy Williams",
-  "Clifford Smith",
-  "Morgan Freeman",
-  "Charles Xavier"
+  {
+    name: "Mike Lowrey",
+    id: 1
+  },
+  {
+    name: "Mike Jones",
+    id: 2
+  },
+  {
+    name: "Harriet Tubman",
+    id: 3
+  },
+  {
+    name: "Charles Xavier",
+    id: 4
+  },
+  {
+    name: "Pierre Sims",
+    id: 5
+  },
+  {
+    name: "Julio Corcino",
+    id: 6
+  }
 ];
 
 const App = () => {
