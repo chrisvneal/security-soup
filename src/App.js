@@ -39,6 +39,7 @@ const App = () => {
         </section>
         <section className="section-border">
           <h2>Random Topic Generator</h2>
+          <button>Generate topic</button>
         </section>
       </main>
       <footer>Footer</footer>
