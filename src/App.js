@@ -7,7 +7,7 @@ const App = () => {
         <h1>Security Soup</h1>
       </header>
       <main>
-        <section>
+        <section className="section-border">
           <h2>Tasks</h2>
           <ul>
             <li>Tell Morgan Freeman to sign paperwork</li>
@@ -18,8 +18,9 @@ const App = () => {
         </section>
         <section>
           <h2>Notes</h2>
+          <div className="section-border"></div>
         </section>
-        <section>
+        <section className="section-border">
           <h2>Officers</h2>
           <ul>
             <li>Matt Lowry</li>
@@ -31,10 +32,10 @@ const App = () => {
             <li>Cindi Domingo</li>
           </ul>
         </section>
-        <section>
+        <section className="section-border">
           <h2>Site Stats</h2>
         </section>
-        <section>
+        <section className="section-border">
           <h2>Random Topic Generator</h2>
         </section>
       </main>
