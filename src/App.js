@@ -16,6 +16,15 @@ const App = () => {
         </section>
         <section>
           <h2>Officers</h2>
+          <ul>
+            <li>Matt Lowry</li>
+            <li>Mike Jones</li>
+            <li>Wendy Williams</li>
+            <li>Clifford Smith</li>
+            <li>Morgan Freeman</li>
+            <li>Chris Xavier</li>
+            <li>Cindi Domingo</li>
+          </ul>
         </section>
         <section>
           <h2>Site Stats</h2>
