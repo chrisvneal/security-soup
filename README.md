@@ -1,2 +1,3 @@
-# security-soup
-Created with CodeSandbox
+# Security Soup
+
+An app to help Security Supervisors "manage" their shift.
