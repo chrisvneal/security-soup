@@ -1,7 +1,17 @@
 import React from "react";
 import Notes from "./components/Notes";
+import ListItems from "./components/ListItems";
 
 import "./styles.scss";
+
+const officers = [
+  "Mike Lowry",
+  "Mike Jones",
+  "Wendy Williams",
+  "Clifford Smith",
+  "Morgan Freeman",
+  "Charles Xavier"
+];
 
 const App = () => {
   return (
@@ -25,13 +35,7 @@ const App = () => {
         <section className="section-border">
           <h2>Officers</h2>
           <ul>
-            <li>Matt Lowry</li>
-            <li>Mike Jones</li>
-            <li>Wendy Williams</li>
-            <li>Clifford Smith</li>
-            <li>Morgan Freeman</li>
-            <li>Chris Xavier</li>
-            <li>Cindi Domingo</li>
+            <ListItems items={officers} />
           </ul>
         </section>
         <section className="section-border">
