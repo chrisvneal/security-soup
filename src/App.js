@@ -9,7 +9,12 @@ const App = () => {
       <main>
         <section>
           <h2>Tasks</h2>
-          <h2>Events</h2>
+          <ul>
+            <li>Tell Morgan Freeman to sign paperwork</li>
+            <li>Help Manager with New Hire Orientation</li>
+            <li>Establish Training for next 1st Watch Shift</li>
+            <li>Load PPE into back / Admin office with Manager</li>
+          </ul>
         </section>
         <section>
           <h2>Notes</h2>
