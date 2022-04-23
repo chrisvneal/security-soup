@@ -1,3 +1,6 @@
+import React from "react";
+import Notes from "./components/Notes";
+
 import "./styles.scss";
 
 const App = () => {
@@ -16,10 +19,9 @@ const App = () => {
             <li>Load PPE into back / Admin office with Manager</li>
           </ul>
         </section>
-        <section>
-          <h2>Notes</h2>
-          <div className="section-border"></div>
-        </section>
+
+        <Notes />
+
         <section className="section-border">
           <h2>Officers</h2>
           <ul>
