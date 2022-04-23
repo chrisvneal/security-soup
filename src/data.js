@@ -27,22 +27,22 @@ const officers = [
 
 const supTasks = [
   {
-    name: "Tell Morgan Freeman to sign paperwork",
+    title: "Tell Morgan Freeman to sign paperwork",
     completed: false,
     id: 1
   },
   {
-    name: "Help Manager with New hire Orientation",
+    title: "Help Manager with New hire Orientation",
     completed: false,
     id: 2
   },
   {
-    name: "Establish Training for next 1st Watch Shift",
+    title: "Establish Training for next 1st Watch Shift",
     completed: false,
     id: 3
   },
   {
-    name: "Load PPE into back / Admin office with Manager",
+    title: "Load PPE into back / Admin office with Manager",
     completed: false,
     id: 4
   }
