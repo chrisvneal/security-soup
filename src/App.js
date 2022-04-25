@@ -3,6 +3,7 @@ import Notes from "./components/Notes";
 import Officers from "./components/Officers";
 import Tasks from "./components/Tasks";
 import SiteHeader from "./components/Site/SiteHeader";
+import SiteFooter from "./components/Site/SiteFooter";
 import { officers, supTasks } from "./data";
 
 import "./styles.scss";
@@ -26,7 +27,7 @@ const App = () => {
           <button>Generate topic</button>
         </section>
       </main>
-      <footer>Footer</footer>
+      <SiteFooter />
     </div>
   );
 };
