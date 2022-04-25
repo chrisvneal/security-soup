@@ -13,11 +13,7 @@ const App = () => {
         <h1>Security Soup</h1>
       </header>
       <main>
-        <section className="section-border">
-          <h2>Tasks</h2>
-
-          <Tasks tasks={supTasks} />
-        </section>
+        <Tasks tasks={supTasks} />
 
         <Notes />
 
