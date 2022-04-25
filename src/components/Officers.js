@@ -5,7 +5,12 @@ const Officers = ({ officers }) => {
     <li key={officer.id}>{officer.name}</li>
   ));
 
-  return <ul className="officers">{officerList}</ul>;
+  return (
+    <section className="section-border officers">
+      <h2>Officers</h2>
+      <ul className="officers-list">{officerList}</ul>
+    </section>
+  );
 };
 
 export default Officers;

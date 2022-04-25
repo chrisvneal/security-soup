@@ -21,11 +21,8 @@ const App = () => {
 
         <Notes />
 
-        <section className="section-border">
-          <h2>Officers</h2>
+        <Officers officers={officers} />
 
-          <Officers officers={officers} />
-        </section>
         <section className="section-border">
           <h2>Site Stats</h2>
         </section>
