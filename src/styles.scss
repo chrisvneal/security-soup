@@ -6,9 +6,14 @@ $section-border__color: #e2e2e2;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
 section {
   margin-bottom: 15px;
-  // outline: 1px dashed lighten(red, 30%);
+  outline: 1px dashed lighten(red, 30%);
+  background: pink;
 
   h2 {
     margin-bottom: 15px;
