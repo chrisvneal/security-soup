@@ -5,7 +5,7 @@ const Notes = () => {
   return (
     <section className="notes">
       <h2>Notes</h2>
-      <textarea className="section-border note-space"></textarea>
+      <textarea className="note-space"></textarea>
       <button className="savenote-btn">Save note</button>
       <RecentNotes />
     </section>

@@ -2,7 +2,7 @@ import React from "react";
 
 const SiteStatus = () => {
   return (
-    <section className=" site-status section-border">
+    <section className=" site-status">
       <h2>Site Status</h2>
       <ul>
         <li className="site">

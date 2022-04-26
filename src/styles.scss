@@ -1,6 +1,4 @@
 $gray: #e2e2e2;
-$section-border__color: $gray;
-$secton-header__color: green;
 $line-height: 1.5;
 
 * {
@@ -9,43 +7,43 @@ $line-height: 1.5;
   box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   font-family: 'Libre Franklin', sans-serif;
+  margin: 0 10px;
 }
 
 .site-header {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   .site-title {
     margin: 15px 0;
   }
 }
 
-
-
 section {
-  padding-top: 10px;
   margin-bottom: 15px;
-  // outline: 1px dashed lighten(red, 30%);
 
   h2 {
-    margin: 15px 0;
-  }
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $gray;
+  }  
 }
 
+
+
 .officers-list > li, .tasks-list li {
-  // margin-bottom: 10px;
   padding: 20px 0;
-  border-top: 1px solid $gray;
 }
 
 .tasks-list li {
   line-height: $line-height;
 }
 
-.section-border {
-  border: 1px solid $section-border__color;
-}
 
 .site {
   margin-bottom: 25px;
@@ -55,16 +53,18 @@ section {
   }
 }
 
-
-
-
 textarea {
   min-width: 100%;
-}
+  border: 1px solid $gray;
+  padding: 8px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  line-height: 1.2;  
 
-// textarea + button {
-//   margin: 25px 0;
-// }
+  &:focus {
+    outline: 1px solid darken($gray, 10%);
+  }
+}
 
 .random-topic {
   margin-bottom: 15px;
@@ -85,10 +85,14 @@ textarea {
 .savenote-btn, .randomtopic-btn {
   width: 100%;
   padding: 20px 0;
-  border: 1px solid $gray;
-  border-bottom: 1px solid darken($gray, 40%);
+  border: none;
+  border-bottom: 1px solid darken($gray, 20%);
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 25px 0;
+}
+
+.task-details h2, .notes h2 {
+  border: none;
 }
