@@ -13,6 +13,16 @@ body {
   font-family: 'Libre Franklin', sans-serif;
 }
 
+.site-header {
+  margin-bottom: 20px;
+
+  .site-title {
+    margin: 15px 0;
+  }
+}
+
+
+
 section {
   margin-bottom: 15px;
   // outline: 1px dashed lighten(red, 30%);
