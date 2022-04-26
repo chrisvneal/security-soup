@@ -7,7 +7,9 @@ const Officers = ({ officers }) => {
 
   return (
     <section className="section-border officers">
-      <h2>Officers</h2>
+      <h2>
+        Officers on Shift: <span className="officers-on-shift__number">6</span>
+      </h2>
       <ul className="officers-list">{officerList}</ul>
     </section>
   );
