@@ -5,6 +5,7 @@ import Tasks from "./components/Tasks";
 import SiteHeader from "./components/Site/SiteHeader";
 import SiteFooter from "./components/Site/SiteFooter";
 import SiteStatus from "./components/SiteStatus";
+import RandomTopicGenerator from "./components/RandomTopicGenerator";
 import { officers, supTasks } from "./data";
 
 import "./styles.scss";
@@ -20,10 +21,7 @@ const App = () => {
 
         <Notes />
 
-        <section className="section-border">
-          <h2>Random Topic Generator</h2>
-          <button>Generate topic</button>
-        </section>
+        <RandomTopicGenerator />
       </main>
       <SiteFooter />
     </div>
