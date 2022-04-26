@@ -1,11 +1,11 @@
 import React from "react";
 
-const DetailedTasks = () => {
+const TaskDetails = () => {
   return (
     <div className="detailed-tasks">
-      <h2>Detailed Tasks</h2>
+      <h2>Task Details</h2>
     </div>
   );
 };
 
-export default DetailedTasks;
+export default TaskDetails;
