@@ -13,10 +13,10 @@ body {
 section {
   margin-bottom: 15px;
   outline: 1px dashed lighten(red, 30%);
-  background: pink;
+  // background: pink;
 
   h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 
@@ -32,4 +32,9 @@ section {
 
 textarea {
   min-width: 100%;
+}
+
+.random-topic {
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
