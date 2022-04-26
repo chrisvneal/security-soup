@@ -1,5 +1,7 @@
 $gray: #e2e2e2;
 $section-border__color: $gray;
+$secton-header__color: green;
+$line-height: 1.5;
 
 * {
   margin: 0;
@@ -16,19 +18,33 @@ section {
   // outline: 1px dashed lighten(red, 30%);
 
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
-.officers-list li, .tasks-list li {
+.officers-list > li, .tasks-list li {
   // margin-bottom: 10px;
   padding: 20px 0;
   border-top: 1px solid $gray;
 }
 
+.tasks-list li {
+  line-height: $line-height;
+}
+
 .section-border {
   border: 1px solid $section-border__color;
 }
+
+.site {
+  margin-bottom: 25px;
+
+  h3, li {
+    margin-bottom: 10px;
+  }
+}
+
+
 
 // Notes section styles
 
@@ -42,10 +58,9 @@ textarea {
 
 .random-topic {
   margin-bottom: 15px;
-  line-height: 1.5;
+  line-height: $line-height;
 }
 
 .officers-on-shift__number {
   font-size: 1.2rem;
-  color: gray;
 }
