@@ -2,9 +2,9 @@ import React from "react";
 
 const DetailedTasks = () => {
   return (
-    <section className="section-border detailed-tasks">
+    <div className="detailed-tasks">
       <h2>Detailed Tasks</h2>
-    </section>
+    </div>
   );
 };
 
