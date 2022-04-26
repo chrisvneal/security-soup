@@ -6,7 +6,7 @@ const SiteStatus = () => {
       <h2>Site Status</h2>
       <ul>
         <li className="site">
-          <h3 classNme="site-name">Rancho Relaxo</h3>
+          <h3 className="site-name">Rancho Relaxo</h3>
           <span>Hours of Operation: 0600 - 1800</span>
           <ul>
             <li>Supervisor: Armani Vuitton</li>
@@ -15,7 +15,7 @@ const SiteStatus = () => {
           </ul>
         </li>
         <li className="site">
-          <h3 classNme="site-name">Biowaste Unlimited</h3>
+          <h3 className="site-name">Biowaste Unlimited</h3>
           <span>Hours: 0430 - 1600</span>
           <ul>
             <li>Supervisor: Fila Rivera</li>
