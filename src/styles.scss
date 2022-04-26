@@ -16,6 +16,12 @@ body {
   margin: 0 10px;
 }
 
+.task-details h2, .notes h2 {
+  border: none;
+}
+
+// SiteHeader styles
+
 .site-header {
   margin-bottom: 30px;
 
@@ -34,16 +40,26 @@ section {
   }  
 }
 
-
+// List styles
 
 .officers-list > li, .tasks-list li {
   padding: 20px 0;
 }
 
-.tasks-list li {
-  line-height: $line-height;
+// Button styles
+
+.savenote-btn, .randomtopic-btn {
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  border-bottom: 1px solid darken($gray, 20%);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 25px 0;
 }
 
+// Site Status styles
 
 .site {
   margin-bottom: 25px;
@@ -52,6 +68,20 @@ section {
     margin-bottom: 10px;
   }
 }
+
+// Officers styles
+
+.officers-on-shift__number {
+  font-size: 1.2rem;
+}
+
+// Tasks
+
+.tasks-list li {
+  line-height: $line-height;
+}
+
+// Notes styles
 
 textarea {
   min-width: 100%;
@@ -66,33 +96,17 @@ textarea {
   }
 }
 
+.note-space {
+  min-height: 250px;
+}
+
+// Random Topic Generator styles
+
 .random-topic {
   margin-bottom: 15px;
   line-height: $line-height;
 }
 
-.officers-on-shift__number {
-  font-size: 1.2rem;
-}
-
-// Notes section styles
-
-.note-space {
-  min-height: 250px;
-}
 
 
-.savenote-btn, .randomtopic-btn {
-  width: 100%;
-  padding: 20px 0;
-  border: none;
-  border-bottom: 1px solid darken($gray, 20%);
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin: 25px 0;
-}
 
-.task-details h2, .notes h2 {
-  border: none;
-}
