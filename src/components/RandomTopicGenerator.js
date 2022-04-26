@@ -8,7 +8,7 @@ const RandomTopicGenerator = () => {
         Proper wanding of visitors at Echo Post especially if they are a pain in
         the ass
       </p>
-      <button>Generate topic</button>
+      <button className="randomtopic-btn">Generate topic</button>
     </section>
   );
 };

@@ -51,9 +51,9 @@ textarea {
   min-width: 100%;
 }
 
-textarea + button {
-  margin: 25px 0;
-}
+// textarea + button {
+//   margin: 25px 0;
+// }
 
 .random-topic {
   margin-bottom: 15px;
@@ -71,7 +71,7 @@ textarea + button {
 }
 
 
-.savenote-btn {
+.savenote-btn, .randomtopic-btn {
   width: 100%;
   padding: 20px 0;
   border: 1px solid $gray;
@@ -79,4 +79,5 @@ textarea + button {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+  margin: 25px 0;
 }
