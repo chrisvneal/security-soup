@@ -15,11 +15,10 @@ const App = () => {
       <SiteHeader />
       <main>
         <SiteStatus />
+        <Officers officers={officers} />
         <Tasks tasks={supTasks} />
 
         <Notes />
-
-        <Officers officers={officers} />
 
         <section className="section-border">
           <h2>Random Topic Generator</h2>
