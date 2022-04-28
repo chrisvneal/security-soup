@@ -48,4 +48,13 @@ const supTasks = [
   }
 ];
 
-export { officers, supTasks };
+const securityTopics = [
+  "Wanding visitors properly",
+  "Greeting people in the main lobby",
+  "Responding to critical incidents",
+  "Handling fire protocols",
+  "Talking to passengers",
+  "Greet passengers with respect"
+];
+
+export { officers, supTasks, securityTopics };
