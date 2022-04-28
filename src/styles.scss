@@ -1,6 +1,11 @@
 $gray: #e2e2e2;
 $line-height: 1.5;
 
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 * {
   margin: 0;
   padding: 0;
