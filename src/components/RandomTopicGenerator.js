@@ -12,10 +12,7 @@ const RandomTopicGenerator = () => {
   return (
     <section className="random-topic-generator">
       <h2>Random Topic Generator</h2>
-      <p className="random-topic">
-        Proper wanding of visitors at Echo Post especially if they are a pain in
-        the ass
-      </p>
+      <p className="random-topic">{securityTopics[0]}</p>
       <button onClick={generateRandomTopic} className="randomtopic-btn">
         Generate topic
       </button>
