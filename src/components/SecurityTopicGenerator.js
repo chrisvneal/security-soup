@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { securityTopics } from "../data";
 
-const RandomTopicGenerator = () => {
+const SecurityTopicGenerator = () => {
   const [currentTopic, setCurrentTopic] = useState(0);
   // console.log("current topic: " + currentTopic);
 
@@ -12,19 +12,19 @@ const RandomTopicGenerator = () => {
       setCurrentTopic((prevState) => prevState + 1);
     }
 
-    document.querySelector(".random-topic").textContent =
+    document.querySelector(".security-topic").textContent =
       securityTopics[currentTopic];
   };
 
   return (
-    <section className="random-topic-generator">
-      <h2>Random Topic Generator</h2>
+    <section className="security-topic-generator">
+      <h2>Security Topic Generator</h2>
       <p className="security-topic">{securityTopics[currentTopic]}</p>
-      <button onClick={showNextTopic} className="randomtopic-btn">
+      <button onClick={showNextTopic} className="securitytopic-btn">
         Generate topic
       </button>
     </section>
   );
 };
 
-export default RandomTopicGenerator;
+export default SecurityTopicGenerator;

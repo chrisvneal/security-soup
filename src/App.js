@@ -5,7 +5,7 @@ import Tasks from "./components/Tasks";
 import SiteHeader from "./components/Site/SiteHeader";
 import SiteFooter from "./components/Site/SiteFooter";
 import SiteStatus from "./components/SiteStatus";
-import RandomTopicGenerator from "./components/RandomTopicGenerator";
+import SecurityTopicGenerator from "./components/SecurityTopicGenerator";
 import { officers, supTasks } from "./data";
 
 import "./styles.scss";
@@ -21,7 +21,7 @@ const App = () => {
 
         <Notes />
 
-        <RandomTopicGenerator />
+        <SecurityTopicGenerator />
       </main>
       <SiteFooter />
     </div>
