@@ -1,30 +1,26 @@
 import React from "react";
+import SiteStatusCard from "./SiteStatusCard";
 
 const SiteStatus = () => {
   return (
     <section className=" site-status">
       <h2>Site Status</h2>
       <ul>
-        <li className="site">
-          <h3 className="site-name">Rancho Relaxo</h3>
+        <SiteStatusCard
+          site="Rancho Relaxo"
+          hours="0600 - 1800"
+          supervisor="Armani Vuitto"
+          totalOfficers={20}
+          security="armed"
+        />
 
-          <ul>
-            <li>Hours of Operation: 0600 - 1800</li>
-            <li>Supervisor: Armani Vuitton</li>
-            <li>20 Officers</li>
-            <li>Secured: armed</li>
-          </ul>
-        </li>
-        <li className="site">
-          <h3 className="site-name">Biowaste Management</h3>
-
-          <ul>
-            <li>Hours: 0430 - 1600</li>
-            <li>Supervisor: Fila Rivera</li>
-            <li>10 Officers</li>
-            <li>Secured: unarmed</li>
-          </ul>
-        </li>
+        <SiteStatusCard
+          site="BioWaste Management"
+          hours="0430 - 1600"
+          supervisor="Champion Rivera"
+          totalOfficers={13}
+          security="armed"
+        />
       </ul>
     </section>
   );
