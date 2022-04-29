@@ -1,9 +1,14 @@
 import React from "react";
 
-const RecentNotes = () => {
+const RecentNotes = ({ recentNotes }) => {
+  const mostRecentNotes = recentNotes.map((note) => {
+    return <li>{note}</li>;
+  });
+
   return (
     <div className="recent-notes">
       <h2>Recent Notes</h2>
+      <ul>{mostRecentNotes}</ul>
     </div>
   );
 };
