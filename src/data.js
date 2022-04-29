@@ -62,7 +62,7 @@ let sites = [
     site: "Rancho Relaxo",
     supervisor: "Armani Vuitton",
     totalOfficers: 20,
-    security: "armed",
+    security: "unarmed",
     hours: "0600 - 1800"
   },
   {

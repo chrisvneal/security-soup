@@ -110,21 +110,24 @@ textarea {
 
 // Topic Generator styles
 
+
+
 .security-topic {
   height: 60px;
   line-height: $line-height;
 }
 
-.armed {
-  color: red;
-  background: lighten(red, 40%);
+@mixin colorArmed($color) {
+  color: $color;
+  background: lighten($color, 40%);
   padding: 1px 5px;
   border-radius: 2px;
 }
 
+.armed {
+  @include colorArmed(red)
+}
+
 .unarmed {
-  color: green;
-  background: lighten(green, 40%);
-  padding: 1px 5px;
-  border-radius: 2px;
+  @include colorArmed(#1d8a1d)
 }
