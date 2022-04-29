@@ -61,6 +61,9 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.savenote-btn {
   margin: 25px 0;
 }
 
@@ -110,6 +113,11 @@ textarea {
 .random-topic {
   margin-bottom: 15px;
   line-height: $line-height;
+}
+
+.random-topic {
+  height: 60px;
+  border: 1px solid red;
 }
 
 
