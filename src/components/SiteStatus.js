@@ -1,27 +1,23 @@
 import React from "react";
 import SiteStatusCard from "./SiteStatusCard";
+import { sites } from "../data";
 
 const SiteStatus = () => {
+  const siteStatusCards = sites.map((site) => {
+    return (
+      <SiteStatusCard
+        site={site.site}
+        hours={site.hours}
+        supervisor={site.supervisor}
+        totalOfficers={site.totalOfficers}
+        security={site.security}
+      />
+    );
+  });
   return (
     <section className=" site-status">
       <h2>Site Status</h2>
-      <ul>
-        <SiteStatusCard
-          site="Rancho Relaxo"
-          hours="0600 - 1800"
-          supervisor="Armani Vuitto"
-          totalOfficers={20}
-          security="armed"
-        />
-
-        <SiteStatusCard
-          site="BioWaste Management"
-          hours="0430 - 1600"
-          supervisor="Champion Rivera"
-          totalOfficers={13}
-          security="armed"
-        />
-      </ul>
+      <ul>{siteStatusCards}</ul>
     </section>
   );
 };

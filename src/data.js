@@ -57,4 +57,21 @@ const securityTopics = [
   "Greet passengers with respect"
 ];
 
-export { officers, supTasks, securityTopics };
+let sites = [
+  {
+    site: "Rancho Relaxo",
+    supervisor: "Armani Vuitton",
+    totalOfficers: 20,
+    security: "armed",
+    hours: "0600 - 1800"
+  },
+  {
+    site: "BioWaste Management",
+    supervisor: "Champion Riviera",
+    totalOfficers: 13,
+    security: "armed",
+    hours: "0430 - 1600"
+  }
+];
+
+export { officers, supTasks, securityTopics, sites };
