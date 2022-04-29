@@ -1,5 +1,7 @@
 $gray: #e2e2e2;
 $line-height: 1.5;
+$red: #f36161;
+$green: #3caf3c;
 
 .App {
   display: grid;
@@ -83,6 +85,10 @@ section {
   font-size: 1.2rem;
 }
 
+.officer-count {
+  font-weight: 600;
+}
+
 // Tasks
 
 .tasks-list li, .recent-notes li {
@@ -134,9 +140,9 @@ textarea {
 }
 
 .site-name .armed {
-  @include colorArmed(red)
+  @include colorArmed($red)
 }
 
 .site-name .unarmed {
-  @include colorArmed(#1d8a1d)
+  @include colorArmed($green)
 }
