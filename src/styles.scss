@@ -122,12 +122,14 @@ textarea {
   padding: 1px 5px;
   border-radius: 2px;
   margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.armed {
+.site-name .armed {
   @include colorArmed(red)
 }
 
-.unarmed {
+.site-name .unarmed {
   @include colorArmed(#1d8a1d)
 }
