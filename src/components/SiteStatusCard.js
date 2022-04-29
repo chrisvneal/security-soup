@@ -15,7 +15,12 @@ const SiteStatusCard = ({
           <li>Hours of Operation: {hours}</li>
           <li>Supervisor: {supervisor}</li>
           <li>{totalOfficers} Officers</li>
-          <li>Secured: {security}</li>
+          <li>
+            Secured:{" "}
+            <span className={security === "armed" ? "armed" : "unarmed"}>
+              {security}
+            </span>
+          </li>
         </ul>
       </li>
     </>
