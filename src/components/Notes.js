@@ -3,10 +3,14 @@ import RecentNotes from "./RecentNotes";
 
 const Notes = () => {
   const [note, setNote] = useState("");
-  const recentNotes = ["take out the trash", "wash the clothes"];
+  const [recentNotes, setRecentNotes] = useState([]);
+
   const onFormSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted");
+    const newNotes = [note, ...recentNotes];
+    setNote("");
+
+    setRecentNotes(newNotes.splice(0, 3));
   };
 
   return (
