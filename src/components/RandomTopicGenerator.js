@@ -19,7 +19,7 @@ const RandomTopicGenerator = () => {
   return (
     <section className="random-topic-generator">
       <h2>Random Topic Generator</h2>
-      <p className="random-topic">{securityTopics[currentTopic]}</p>
+      <p className="security-topic">{securityTopics[currentTopic]}</p>
       <button onClick={showNextTopic} className="randomtopic-btn">
         Generate topic
       </button>
