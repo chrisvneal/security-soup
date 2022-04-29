@@ -26,7 +26,7 @@ const Notes = () => {
           Save note
         </button>
       </form>
-      <RecentNotes recentNotes={recentNotes} />
+      {recentNotes.length ? <RecentNotes recentNotes={recentNotes} /> : null}
     </section>
   );
 };
