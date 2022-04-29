@@ -117,8 +117,14 @@ textarea {
 
 .armed {
   color: red;
+  background: lighten(red, 40%);
+  padding: 1px 5px;
+  border-radius: 2px;
 }
 
 .unarmed {
   color: green;
+  background: lighten(green, 40%);
+  padding: 1px 5px;
+  border-radius: 2px;
 }
