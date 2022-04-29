@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { securityTopics } from "../data";
 
 const RandomTopicGenerator = () => {
   const [currentTopic, setCurrentTopic] = useState(0);
+  // console.log("current topic: " + currentTopic);
 
-  const generateRandomTopic = () => {
-    setCurrentTopic(Math.floor(Math.random() * securityTopics.length));
+  const showNextTopic = () => {
+    if (currentTopic === securityTopics.length - 1) {
+      setCurrentTopic(0);
+    } else {
+      setCurrentTopic((prevState) => prevState + 1);
+    }
 
     document.querySelector(".random-topic").textContent =
       securityTopics[currentTopic];
@@ -15,7 +20,7 @@ const RandomTopicGenerator = () => {
     <section className="random-topic-generator">
       <h2>Random Topic Generator</h2>
       <p className="random-topic">{securityTopics[currentTopic]}</p>
-      <button onClick={generateRandomTopic} className="randomtopic-btn">
+      <button onClick={showNextTopic} className="randomtopic-btn">
         Generate topic
       </button>
     </section>
