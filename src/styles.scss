@@ -110,15 +110,11 @@ textarea {
   font-weight: bold;
 }
 
-.recent-notes ul {
-  list-style: disc;
-  list-style-position: inside;
-  // padding-left: 10px;
-
-  li {
+.recent-notes ul li {
     margin-bottom: 25px;
   }
-}
+
+
 // Topic Generator styles
 
 
