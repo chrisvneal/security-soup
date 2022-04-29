@@ -119,7 +119,6 @@ textarea {
 
 @mixin colorArmed($color) {
   color: $color;
-  background: lighten($color, 40%);
   padding: 1px 5px;
   border-radius: 2px;
 }
