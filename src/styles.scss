@@ -41,6 +41,10 @@ body {
   // margin: 0 10px;
 }
 
+section > h2:first-child {
+  color: $site-color--secondary;
+}
+
 .task-details h2, .notes h2 {
   border: none;
 }
