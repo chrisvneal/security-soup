@@ -4,7 +4,7 @@ $red: #f36161;
 $green: #3caf3c;
 $site-color--main: #00204a;
 $site-color--secondary: #005792;
-$site-color--tertiary: #00bbf0;
+$site-color--tertiary: darken(#00bbf0, 10%);
 $site-color--offset: #fdb44b;
 $white: #fff;
 
@@ -180,6 +180,11 @@ textarea {
 
 .site-name .unarmed {
   @include colorArmed($green)
+}
+
+.site-name {
+  color: $site-color--tertiary;
+  font-weight: 400;
 }
 
 footer {
