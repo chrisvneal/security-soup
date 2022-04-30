@@ -115,8 +115,9 @@ section {
 
 // Officers styles
 
-.officers-on-shift__number {
+.officers-on-shift-number {
   font-size: 1.2rem;
+  color: $site-color--offset;
 }
 
 .officer-count {
@@ -179,4 +180,9 @@ textarea {
 
 .site-name .unarmed {
   @include colorArmed($green)
+}
+
+footer {
+  font-size: .80rem;
+  padding: 15px 0;
 }
