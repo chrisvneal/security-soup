@@ -69,11 +69,16 @@ color: $text-color--secondary;
 // SiteHeader styles
 
 .site-header {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 
   .site-title {
     margin: 10px 0;
   }
+}
+
+.date-time {
+  background: red;
+  padding: 5px 0 10px;
 }
 
 section {
