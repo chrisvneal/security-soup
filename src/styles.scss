@@ -14,9 +14,16 @@ $white: #fff;
   grid-template-columns: 1fr;
 }
 
-header {
+header, footer {
   background: $site-color--main;
   color: $white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+main {
+  margin: 0 10px;
 }
 
 * {
@@ -44,7 +51,7 @@ body {
   margin-bottom: 30px;
 
   .site-title {
-    margin: 15px 0;
+    margin: 10px 0;
   }
 }
 
