@@ -8,7 +8,8 @@ const Officers = ({ officers }) => {
   return (
     <section className="officers-on-shift">
       <h2>
-        Officers on Shift: <span className="officers-on-shift-number">6</span>
+        Officers on Shift:{" "}
+        <span className="officers-on-shift-number">{officers.length}</span>
       </h2>
       <ul className="officers-list">{officerList}</ul>
     </section>
