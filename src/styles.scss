@@ -16,6 +16,10 @@ $text-color--secondary: lighten($text-color, 15%);
   grid-template-columns: 1fr;
 }
 
+.soup {
+  width: 100px;
+}
+
 header, footer {
   background: rgb(23,49,84);
 background: radial-gradient(circle, rgba(23,49,84,0.9948354341736695) 9%, rgba(2,0,36,1) 72%);
