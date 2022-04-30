@@ -7,7 +7,7 @@ const RecentNotes = ({ recentNotes }) => {
 
   return (
     <div className="recent-notes">
-      <h2>Most Recent Notes</h2>
+      <h2 className="header-dropdown">Most Recent Notes</h2>
       <ul>{mostRecentNotes}</ul>
     </div>
   );

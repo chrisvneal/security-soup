@@ -7,6 +7,8 @@ $site-color--secondary: #005792;
 $site-color--tertiary: darken(#00bbf0, 10%);
 $site-color--offset: #fdb44b;
 $white: #fff;
+$text-color: lighten(black, 5%);
+$text-color--secondary: lighten($text-color, 15%);
 
 
 .App {
@@ -40,6 +42,7 @@ ul {
 body {
   font-family: 'Libre Franklin', sans-serif;
   // margin: 0 10px;
+  color: $text-color;
 }
 
 section > h2:first-child {
@@ -48,6 +51,10 @@ section > h2:first-child {
 
 .task-details h2, .notes h2 {
   border: none;
+}
+
+.header-dropdown {
+color: $text-color--secondary;
 }
 
 // SiteHeader styles
