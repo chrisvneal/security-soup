@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderDate from "../HeaderDate";
 
 const SiteHeader = () => {
   return (
@@ -11,7 +12,7 @@ const SiteHeader = () => {
           className="soup"
         />
       </div>
-      <div className="header-date">Date</div>
+      <HeaderDate />
     </header>
   );
 };
