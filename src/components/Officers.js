@@ -2,7 +2,10 @@ import React from "react";
 
 const Officers = ({ officers }) => {
   const officerList = officers.map((officer) => (
-    <li key={officer.id}>{officer.name}</li>
+    <li key={officer.id}>
+      <span className="officer-name">{officer.name}</span>
+      <span className="officer-post">{officer.post}</span>
+    </li>
   ));
 
   return (

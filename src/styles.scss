@@ -74,6 +74,17 @@ section > h2:first-child {
   color: $text-color--secondary;
 }
 
+.officers-on-shift li span {
+  display: block;
+  margin-bottom: 7px;  
+}
+
+.officer-post {
+  color: #9c9a9a;
+  // font-weight: 200;
+  font-size: .90rem;
+}
+
 
 
 // SiteHeader styles
@@ -106,10 +117,16 @@ section {
 
 // List styles
 
-.officers-list > li,
+
 .tasks-list li {
   padding: 20px 0;
   border-bottom: 1px solid lighten($gray, 2%);
+}
+
+.officers-list > li {
+  padding: 5px 0;
+  border-bottom: 1px solid lighten($gray, 2%);
+
 }
 
 // Button styles
