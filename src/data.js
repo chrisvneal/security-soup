@@ -15,37 +15,43 @@ const officers = [
     name: createName(),
     id: 1,
     post: "Main Lobby",
-    avatar: getImage()
+    avatar: getImage(),
+    bio: "This is the Officer's BIO"
   },
   {
     name: createName(),
     id: 2,
     post: "Rear Entrance",
-    avatar: getImage()
+    avatar: getImage(),
+    bio: "This is the Officer's BIO"
   },
   {
     name: createName(),
     id: 3,
     post: "Side Gate",
-    avatar: getImage()
+    avatar: getImage(),
+    bio: "This is the Officer's BIO"
   },
   {
     name: createName(),
     id: 4,
     post: "5th Floor Entrance",
-    avatar: getImage()
+    avatar: getImage(),
+    bio: "This is the Officer's BIO"
   },
   {
     name: createName(),
     id: 5,
     post: "Parking Garage",
-    avatar: getImage()
+    avatar: getImage(),
+    bio: "This is the Officer's BIO"
   },
   {
     name: createName(),
     id: 6,
     post: "Sending Room",
-    avatar: getImage()
+    avatar: getImage(),
+    bio: "This is the Officer's BIO"
   }
 ];
 

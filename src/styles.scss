@@ -85,6 +85,7 @@ section > h2:first-child {
   border-radius: 40px;
 }
 
+
 .officer-post {
   color: #9c9a9a;
   // font-weight: 200;
@@ -94,7 +95,19 @@ section > h2:first-child {
 .officers-list .top {
   display: flex;
   align-items: base;
+  margin-bottom: 20px;
 }
+
+.officer-details {
+  margin-bottom: 15px;
+  line-height: $line-height;
+}
+
+.hidden {
+  display: none;
+}
+
+
 
 
 
@@ -143,7 +156,7 @@ section {
 }
 
 .officers-list > li {
-  padding: 10px 0;
+  padding: 15px 0 10px;
   border-bottom: 1px solid lighten($gray, 2%);
 
 }

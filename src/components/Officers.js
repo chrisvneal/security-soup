@@ -17,7 +17,7 @@ const Officers = ({ officers }) => {
           <span className="officer-post">{officer.post}</span>
         </div>
       </div>
-      <OfficerDetails />
+      <OfficerDetails bio={officer.bio} />
     </li>
   ));
 

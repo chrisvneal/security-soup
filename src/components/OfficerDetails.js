@@ -1,9 +1,9 @@
 import React from "react";
 
-const OfficerDetails = () => {
+const OfficerDetails = ({ bio }) => {
   return (
     <div className="officer-details">
-      <p>Officer Details</p>
+      <p className="officer-bio">{bio}</p>
     </div>
   );
 };
