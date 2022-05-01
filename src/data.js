@@ -51,7 +51,7 @@ const officers = [
 
 const supTasks = [
   {
-    title: "Tell Morgan Freeman to sign paperwork",
+    title: "Tell " + createName() + " to sign paperwork",
     completed: false,
     id: 1
   },
