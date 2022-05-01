@@ -71,17 +71,24 @@ const securityTopics = [
   "Completing Shift Activity Reports properly"
 ];
 
-let sites = [
+const sites = [
   {
-    site: "Rancho Relaxo",
-    supervisor: "Armani Vuitton",
+    site: faker.company.companyName(),
+    supervisor: createName(),
     totalOfficers: 20,
     security: "unarmed",
     hours: "0600 - 1800"
   },
   {
-    site: "BioWaste Management",
-    supervisor: "Champion Riviera",
+    site: faker.company.companyName(),
+    supervisor: createName(),
+    totalOfficers: 13,
+    security: "armed",
+    hours: "0430 - 1600"
+  },
+  {
+    site: faker.company.companyName(),
+    supervisor: createName(),
     totalOfficers: 13,
     security: "armed",
     hours: "0430 - 1600"

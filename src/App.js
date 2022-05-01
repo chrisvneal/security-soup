@@ -7,10 +7,12 @@ import SiteFooter from "./components/Site/SiteFooter";
 import SiteStatus from "./components/SiteStatus";
 import SecurityTopicGenerator from "./components/SecurityTopicGenerator";
 import { officers, supTasks } from "./data";
+// import faker from "faker";
 
 import "./styles.scss";
 
 const App = () => {
+  // console.log(faker);
   return (
     <div className="App">
       <SiteHeader />
