@@ -1,12 +1,29 @@
 import React from "react";
 import OfficerDetails from "./OfficerDetails";
 
-const officersList = Array.from(
+// Get array of all officer bio elements
+const officerBios = Array.from(
   document.querySelectorAll(".officers-list .officer-bio")
 );
-officersList.forEach((item) => {
+
+// for each item, add a class of 'hidden'
+officerBios.forEach((item) => {
   item.classList.add("hidden");
 });
+
+// add click event to all officer details
+const officerDetails = Array.from(
+  document.querySelectorAll(".officer-details")
+);
+
+officerDetails.forEach((item) => {
+  item.addEventListener("click", (e) => showCard(e));
+});
+
+const showCard = (e) => {
+  console.log(e.target.classList);
+  // e.target.classList.add("show");
+};
 
 const Officers = ({ officers }) => {
   const officerList = officers.map((officer) => (
