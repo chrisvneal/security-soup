@@ -6,36 +6,46 @@ const createName = () => {
   return first + " " + last;
 };
 
+const getImage = () => {
+  return "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
+};
+
 const officers = [
   {
     name: createName(),
     id: 1,
-    post: "Main Lobby"
+    post: "Main Lobby",
+    avatar: getImage()
   },
   {
     name: createName(),
     id: 2,
-    post: "Rear Entrance"
+    post: "Rear Entrance",
+    avatar: getImage()
   },
   {
     name: createName(),
     id: 3,
-    post: "Side Gate"
+    post: "Side Gate",
+    avatar: getImage()
   },
   {
     name: createName(),
     id: 4,
-    post: "5th Floor Entrance"
+    post: "5th Floor Entrance",
+    avatar: getImage()
   },
   {
     name: createName(),
     id: 5,
-    post: "Parking Garage"
+    post: "Parking Garage",
+    avatar: getImage()
   },
   {
     name: createName(),
     id: 6,
-    post: "Sending Room"
+    post: "Sending Room",
+    avatar: getImage()
   }
 ];
 
