@@ -4,6 +4,7 @@ import HeaderDate from "../HeaderDate";
 const SiteHeader = () => {
   return (
     <header className="site-header">
+      <HeaderDate />
       <div className="brand-logo">
         <h1 className="site-title">Security Soup</h1>
         <img
@@ -12,7 +13,6 @@ const SiteHeader = () => {
           className="soup"
         />
       </div>
-      <HeaderDate />
     </header>
   );
 };
