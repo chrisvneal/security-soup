@@ -40,7 +40,10 @@ const HeaderDate = () => {
   const clock = `${hour}:${minutes}:`;
 
   setInterval(() => {
-    const seconds = new Date().getSeconds();
+    const seconds =
+      new Date().getSeconds() < 10
+        ? "0" + new Date().getSeconds()
+        : new Date().getSeconds();
     document.querySelector(".seconds").textContent = `${seconds}`;
   }, 1000);
 
