@@ -1,37 +1,39 @@
 import faker from "faker";
 
-const createName = (first, last) => {
+const createName = () => {
+  const first = faker.name.firstName();
+  const last = faker.name.lastName();
   return first + " " + last;
 };
 
 const officers = [
   {
-    name: createName(faker.name.firstName(), faker.name.lastName()),
+    name: createName(),
     id: 1,
     post: "Main Lobby"
   },
   {
-    name: createName(faker.name.firstName(), faker.name.lastName()),
+    name: createName(),
     id: 2,
     post: "Rear Entrance"
   },
   {
-    name: createName(faker.name.firstName(), faker.name.lastName()),
+    name: createName(),
     id: 3,
     post: "Side Gate"
   },
   {
-    name: createName(faker.name.firstName(), faker.name.lastName()),
+    name: createName(),
     id: 4,
     post: "5th Floor Entrance"
   },
   {
-    name: createName(faker.name.firstName(), faker.name.lastName()),
+    name: createName(),
     id: 5,
     post: "Parking Garage"
   },
   {
-    name: createName(faker.name.firstName(), faker.name.lastName()),
+    name: createName(),
     id: 6,
     post: "Sending Room"
   }
