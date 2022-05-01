@@ -34,7 +34,8 @@ const HeaderDate = () => {
   const date = `${day} ${months[month]} ${year}`;
 
   const hour = time.getHours();
-  const minutes = time.getMinutes();
+  const minutes =
+    time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
   const seconds = time.getSeconds();
   const clock = `${hour}:${minutes}:${seconds}`; //   console.log(months[month]);
 
