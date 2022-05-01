@@ -5,25 +5,23 @@ import OfficerDetails from "./OfficerDetails";
 const officerBios = Array.from(
   document.querySelectorAll(".officers-list .officer-bio")
 );
+const officerDetails = Array.from(
+  document.querySelectorAll(".officer-details")
+);
 
 // for each item, add a class of 'hidden'
 officerBios.forEach((item) => {
   item.classList.add("hidden");
 });
 
-// add click event to all officer details
-const officerDetails = Array.from(
-  document.querySelectorAll(".officer-details")
-);
-
-officerDetails.forEach((item) => {
-  item.addEventListener("click", (e) => showCard(e));
-});
-
 const showCard = (e) => {
   console.log(e.target.classList);
   // e.target.classList.add("show");
 };
+
+officerDetails.forEach((item) => {
+  item.addEventListener("click", (e) => showCard(e));
+});
 
 const Officers = ({ officers }) => {
   const officerList = officers.map((officer) => (
