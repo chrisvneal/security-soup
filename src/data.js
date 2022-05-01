@@ -61,12 +61,12 @@ const supTasks = [
 ];
 
 const securityTopics = [
-  "Wanding visitors properly",
-  "Greeting people in the main lobby",
+  "Wanding visitors correctly",
+  "AIDET & AHEART Review",
   "Responding to critical incidents",
-  "Handling fire protocols",
-  "Talking to passengers",
-  "Greet passengers with respect"
+  "Handling Code Red responses, Fire protocols",
+  "Greet passengers with respect",
+  "Completing Shift Activity Reports properly"
 ];
 
 let sites = [
