@@ -1,27 +1,33 @@
 const officers = [
   {
     name: "Mike Lowrey",
-    id: 1
+    id: 1,
+    post: "Main Lobby"
   },
   {
     name: "Mike Jones",
-    id: 2
+    id: 2,
+    post: "Rear Entrance"
   },
   {
     name: "Harriet Tubman",
-    id: 3
+    id: 3,
+    post: "Side Gate"
   },
   {
     name: "Charles Xavier",
-    id: 4
+    id: 4,
+    post: "5th Floor Entrance"
   },
   {
     name: "Pierre Sims",
-    id: 5
+    id: 5,
+    post: "Parking Garage"
   },
   {
     name: "Julio Corcino",
-    id: 6
+    id: 6,
+    post: "Sending Room"
   }
 ];
 
