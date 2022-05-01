@@ -21,15 +21,23 @@ const HeaderDate = () => {
   const month = time.getMonth();
   const day = time.getDate();
   const year = time.getFullYear();
-  //   console.log(months[month]);
-
   const date = `${day} ${months[month]} ${year}`;
+
+  const hour = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+  const clock = `${hour}:${minutes}:${seconds}`; //   console.log(months[month]);
 
   //   setInterval(() => {
   //     console.log(time);
   //   }, 1000);
 
-  return <div className="header-date">{date}</div>;
+  return (
+    <div className="header-date">
+      {date}
+      {clock}
+    </div>
+  );
 };
 
 export default HeaderDate;
