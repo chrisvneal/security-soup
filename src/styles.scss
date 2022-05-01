@@ -115,6 +115,10 @@ section {
   font-weight: 500;
 }
 
+.site-name {
+  font-size: 1.2rem;
+}
+
 // List styles
 
 
@@ -127,6 +131,10 @@ section {
   padding: 10px 0;
   border-bottom: 1px solid lighten($gray, 2%);
 
+}
+
+.site ul {
+  font-size: .85rem;
 }
 
 // Button styles

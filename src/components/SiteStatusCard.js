@@ -17,8 +17,8 @@ const SiteStatusCard = ({
           </span>
         </h3>
         <ul>
-          <li>Hours of Operation: {hours}</li>
           <li>Supervisor: {supervisor}</li>
+          <li>Hours of Operation: {hours}</li>
           <li>
             <span className="officer-count">{totalOfficers}</span> Officers
           </li>
