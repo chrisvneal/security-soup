@@ -36,18 +36,22 @@ const HeaderDate = () => {
   const hour = time.getHours();
   const minutes =
     time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
-  const seconds = time.getSeconds();
-  const clock = `${hour}:${minutes}:${seconds}`; //   console.log(months[month]);
+  //   const seconds = time.getSeconds();
+  const clock = `${hour}:${minutes}:`;
 
-  //   setInterval(() => {
-  //     console.log(time);
-  //   }, 1000);
+  setInterval(() => {
+    const seconds = new Date().getSeconds();
+    document.querySelector(".seconds").textContent = `${seconds}`;
+  }, 1000);
 
   return (
     <div className="header-date">
       <span className="day-of-week">{days[dayOfWeek]}</span>
       {date}
-      {clock}
+      <span className="time">
+        {clock}
+        <span className="seconds">{new Date().getSeconds()}</span>
+      </span>
     </div>
   );
 };
