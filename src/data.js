@@ -1,31 +1,37 @@
+import faker from "faker";
+
+const createName = (first, last) => {
+  return first + " " + last;
+};
+
 const officers = [
   {
-    name: "Mike Lowrey",
+    name: createName(faker.name.firstName(), faker.name.lastName()),
     id: 1,
     post: "Main Lobby"
   },
   {
-    name: "Mike Jones",
+    name: createName(faker.name.firstName(), faker.name.lastName()),
     id: 2,
     post: "Rear Entrance"
   },
   {
-    name: "Harriet Tubman",
+    name: createName(faker.name.firstName(), faker.name.lastName()),
     id: 3,
     post: "Side Gate"
   },
   {
-    name: "Charles Xavier",
+    name: createName(faker.name.firstName(), faker.name.lastName()),
     id: 4,
     post: "5th Floor Entrance"
   },
   {
-    name: "Pierre Sims",
+    name: createName(faker.name.firstName(), faker.name.lastName()),
     id: 5,
     post: "Parking Garage"
   },
   {
-    name: "Julio Corcino",
+    name: createName(faker.name.firstName(), faker.name.lastName()),
     id: 6,
     post: "Sending Room"
   }
