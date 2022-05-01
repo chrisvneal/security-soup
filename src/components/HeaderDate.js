@@ -14,13 +14,23 @@ const months = [
   "Nov",
   "Dec",
 ];
-
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 const HeaderDate = () => {
   const time = new Date();
 
   const month = time.getMonth();
   const day = time.getDate();
   const year = time.getFullYear();
+  const dayOfWeek = time.getDay();
+
   const date = `${day} ${months[month]} ${year}`;
 
   const hour = time.getHours();
@@ -34,6 +44,7 @@ const HeaderDate = () => {
 
   return (
     <div className="header-date">
+      <span className="day-of-week">{days[dayOfWeek]}</span>
       {date}
       {clock}
     </div>
