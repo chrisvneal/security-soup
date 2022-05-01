@@ -10,7 +10,6 @@ $white: #fff;
 $text-color: lighten(black, 5%);
 $text-color--secondary: lighten($text-color, 15%);
 
-
 .App {
   display: grid;
   grid-template-columns: 1fr;
@@ -20,19 +19,27 @@ $text-color--secondary: lighten($text-color, 15%);
   width: 100px;
 }
 
-header, footer {
-  background: rgb(23,49,84);
-background: radial-gradient(circle, rgba(23,49,84,0.9948354341736695) 9%, rgba(2,0,36,1) 72%);
+header,
+footer {
+  background: rgb(23, 49, 84);
+  background: radial-gradient(
+    circle,
+    rgba(23, 49, 84, 0.9948354341736695) 9%,
+    rgba(2, 0, 36, 1) 72%
+  );
   color: $white;
-  padding: 10px;
+  // padding: 10px;
   text-align: center;
+}
+
+.brand-logo {
+  padding: 10px;
 }
 
 a {
   color: inherit;
   // text-decoration: none;
 }
-
 
 main {
   margin: 0 10px;
@@ -49,7 +56,7 @@ ul {
 }
 
 body {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   // margin: 0 10px;
   color: $text-color;
 }
@@ -58,12 +65,13 @@ section > h2:first-child {
   color: $site-color--secondary;
 }
 
-.task-details h2, .notes h2 {
+.task-details h2,
+.notes h2 {
   border: none;
 }
 
 .header-dropdown {
-color: $text-color--secondary;
+  color: $text-color--secondary;
 }
 
 // SiteHeader styles
@@ -89,25 +97,27 @@ section {
     margin-bottom: 15px;
     padding-bottom: 5px;
     border-bottom: 1px solid $gray;
-  }  
+  }
 }
 
 .site-title {
-  font-family: 'Anton';
+  font-family: "Anton";
   letter-spacing: 3px;
   font-weight: 500;
 }
 
 // List styles
 
-.officers-list > li, .tasks-list li {
+.officers-list > li,
+.tasks-list li {
   padding: 20px 0;
   border-bottom: 1px solid lighten($gray, 2%);
 }
 
 // Button styles
 
-.savenote-btn, .securitytopic-btn {
+.savenote-btn,
+.securitytopic-btn {
   width: 100%;
   padding: 20px 0;
   border: none;
@@ -126,14 +136,16 @@ section {
 .site {
   margin-bottom: 25px;
 
-  h3, li {
+  h3,
+  li {
     margin-bottom: 10px;
   }
 }
 
 // Officers styles
 
-.officers-on-shift-number, .task-count {
+.officers-on-shift-number,
+.task-count {
   font-size: 1.2rem;
   color: $site-color--offset;
   margin-left: 3px;
@@ -145,7 +157,8 @@ section {
 
 // Tasks
 
-.tasks-list li, .recent-notes li {
+.tasks-list li,
+.recent-notes li {
   line-height: $line-height;
 }
 
@@ -157,7 +170,7 @@ textarea {
   padding: 8px;
   font-size: 1rem;
   font-family: sans-serif;
-  line-height: $line-height;  
+  line-height: $line-height;
 
   &:focus {
     outline: 1px solid darken($gray, 10%);
@@ -171,13 +184,10 @@ textarea {
 }
 
 .recent-notes ul li {
-    margin-bottom: 25px;
-  }
-
+  margin-bottom: 25px;
+}
 
 // Topic Generator styles
-
-
 
 .security-topic {
   height: 60px;
@@ -194,11 +204,11 @@ textarea {
 }
 
 .site-name .armed {
-  @include colorArmed($red)
+  @include colorArmed($red);
 }
 
 .site-name .unarmed {
-  @include colorArmed($green)
+  @include colorArmed($green);
 }
 
 .site-name {
@@ -207,6 +217,6 @@ textarea {
 }
 
 footer {
-  font-size: .80rem;
+  font-size: 0.8rem;
   padding: 15px 0;
 }
