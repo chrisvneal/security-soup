@@ -1,6 +1,13 @@
 import React from "react";
 import OfficerDetails from "./OfficerDetails";
 
+const officersList = Array.from(
+  document.querySelectorAll(".officers-list .officer-bio")
+);
+officersList.forEach((item) => {
+  item.classList.add("hidden");
+});
+
 const Officers = ({ officers }) => {
   const officerList = officers.map((officer) => (
     <li key={officer.id}>
