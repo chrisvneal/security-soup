@@ -11,25 +11,27 @@ const Officers = ({ officers }) => {
       document.querySelectorAll(".officer-details .officer-bio")
     );
 
-    const hideItems = () => {
+    const hideAllBios = () => {
       officerBios.forEach((item) => {
         item.classList.add("hidden");
+        // item.classList.remove("active");
         // console.log(item)
       });
     };
-    hideItems();
+
+    hideAllBios();
 
     officerListItem.forEach((item) => {
       item.addEventListener("click", (e) => {
-        // e.stopPropagation();
         e.stopImmediatePropagation();
 
-        // make all bios hidden
-        hideItems();
+        const thisBioCard = e.currentTarget.lastChild.lastChild;
 
-        e.currentTarget.lastChild.lastChild.classList.remove("hidden");
-        // e.currentTarget.lastChild.classList.toggle("show");
-        // console.log(e.currentTarget.lastChild.lastChild);
+        // hide all bios, then..
+        // hideAllBios();
+
+        // ...show current card
+        thisBioCard.classList.toggle("hidden");
       });
     });
 
