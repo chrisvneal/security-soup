@@ -24,18 +24,10 @@ const Officers = ({ officers }) => {
     officerListItem.forEach((item) => {
       item.addEventListener("click", (e) => {
         e.stopImmediatePropagation();
-
-        const thisBioCard = e.currentTarget.lastChild.lastChild;
-
-        // hide all bios, then..
-        // hideAllBios();
-
-        // ...show current card
-        thisBioCard.classList.toggle("hidden");
+        const officerBio = e.currentTarget.lastChild.lastChild;
+        officerBio.classList.toggle("hidden");
       });
     });
-
-    // console.log(officerBios)
   }); // end useEffect
 
   const officerList = officers.map((officer) => (
