@@ -5,7 +5,9 @@ const OfficerDetails = ({ bio, name, post }) => {
     <div className="officer-details">
       <span className="officer-name">{name}</span>
       <span className="officer-post">{post}</span>
-      <p className="officer-bio">{bio}</p>
+      <div className="officer-bio">
+        <p>{bio}</p>
+      </div>
     </div>
   );
 };
