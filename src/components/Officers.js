@@ -3,22 +3,27 @@ import OfficerDetails from "./OfficerDetails";
 
 const Officers = ({ officers }) => {
   useEffect(() => {
-    const officerBios = Array.from(
-      document.querySelectorAll(".officers-list .officer-bio")
-    );
-    const officerDetails = Array.from(
+    const officerListItem = Array.from(
       document.querySelectorAll(".officers-list li")
     );
 
-    officerDetails.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        e.stopImmediatePropagation();
-        console.log(e.target);
-      });
-    });
+    const officerBios = Array.from(
+      document.querySelectorAll(".officer-details .officer-bio")
+    );
     officerBios.forEach((item) => {
       item.classList.add("hidden");
+      // console.log(item)
     });
+
+    officerListItem.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        // e.stopPropagation();
+        e.stopImmediatePropagation();
+        console.log(e.currentTarget.lastChild.classList);
+      });
+    });
+
+    // console.log(officerBios)
   }); // end useEffect
 
   const officerList = officers.map((officer) => (

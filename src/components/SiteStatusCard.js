@@ -9,7 +9,7 @@ const SiteStatusCard = ({
 }) => {
   return (
     <>
-      <li className="site">
+      <li key={site} className="site">
         <h3 className="site-name">
           {site}
           <span className={security === "armed" ? "armed" : "unarmed"}>

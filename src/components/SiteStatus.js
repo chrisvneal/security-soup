@@ -11,6 +11,7 @@ const SiteStatus = () => {
         supervisor={site.supervisor}
         totalOfficers={site.totalOfficers}
         security={site.security}
+        key={site.site}
       />
     );
   });
