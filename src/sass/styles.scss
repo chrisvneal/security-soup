@@ -1,3 +1,4 @@
+// variables & Mixins
 $gray: #e2e2e2;
 $line-height: 1.5;
 $red: #f36161;
@@ -10,13 +11,20 @@ $white: #fff;
 $text-color: lighten(black, 5%);
 $text-color--secondary: lighten($text-color, 15%);
 
+@mixin colorArmed($color) {
+  color: $color;
+  padding: 1px 5px;
+  border-radius: 2px;
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+// Layout styles (header, main, section, footer
+
 .App {
   display: grid;
   grid-template-columns: 1fr;
-}
-
-.soup {
-  width: 100px;
 }
 
 header,
@@ -28,22 +36,29 @@ footer {
     rgba(2, 0, 36, 1) 72%
   );
   color: $white;
-  // padding: 10px;
   text-align: center;
-}
-
-.brand-logo {
-  padding: 10px;
-}
-
-a {
-  color: inherit;
-  // text-decoration: none;
 }
 
 main {
   margin: 0 10px;
 }
+
+section {
+  margin-bottom: 40px;
+
+  h2 {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $gray;
+  }
+}
+
+footer {
+  font-size: 0.8rem;
+  padding: 15px 0;
+}
+
+/********* Global styles *********/
 
 * {
   margin: 0;
@@ -51,15 +66,20 @@ main {
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
 ul {
   list-style-type: none;
 }
-
 body {
   font-family: "Libre Franklin", sans-serif;
-  // margin: 0 10px;
-  color: $text-color;
+    color: $text-color;
 }
+
+// Typography styles
+
 
 section > h2:first-child {
   color: $site-color--secondary;
@@ -74,112 +94,175 @@ section > h2:first-child {
   color: $text-color--secondary;
 }
 
-.officers-on-shift li span {
-  display: block;
-  margin-bottom: 7px;  
+.officers-on-shift-number,
+.task-count {
+  font-size: 1.2rem;
+  color: $site-color--offset;
+  margin-left: 3px;
 }
 
-.officer-avatar {
-  width: 60px;
-  margin-right: 20px;
-  border-radius: 40px;
-}
-
-
-.officer-post {
-  color: #9c9a9a;
-  // font-weight: 200;
-  font-size: .90rem;
-}
-
-.officers-list li {
-  display: flex;
-  align-items: base;
-  margin-bottom: 20px;
-}
-
-.officer-details {
-  // margin-bottom: 15px;
-  line-height: $line-height;
-}
-
-.officer-bio {
-  border-top: 1px solid $gray;
-  padding-top: 15px;
-  margin-top: 10px;
-}
-
-.officer-details {
-  // border: 1px solid red;
-  width: 100%;
-}
-
-.hidden {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-
-
-
-// SiteHeader styles
+/******** SiteHeader styles **********/
 
 .site-header {
   margin-bottom: 20px;
+ 
+  .brand-logo {
+    padding: 10px; 
 
-  .site-title {
-    margin: 10px 0;
+    .site-title {
+      font-family: "Anton";
+      letter-spacing: 3px;
+      font-weight: 500;
+      margin: 10px 0;
+    }  
   }
+    
+  .soup {
+    width: 100px;
+  }  
+}
+
+/********* Site Status styles *********/
+
+.site {
+  margin-bottom: 25px;
+
+  .officer-count {
+    font-weight: 600;
+  }
+  
+  
+
+  ul {
+    font-size: .85rem;
+  }  
+
+  
+.site-name {
+  color: $site-color--tertiary;
+  font-weight: 400;
+  font-size: 1.2rem;
+
+
+  .armed {
+    @include colorArmed($red);
+  }
+
+  .unarmed {
+    @include colorArmed($green);
+  }
+  
 }
 
 .site-info li:first-child span {
   font-weight: bold;
 }
 
-
-
-section {
-  margin-bottom: 40px;
-
-  h2 {
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid $gray;
+  h3,
+  li {
+    margin-bottom: 10px;
   }
 }
 
-.site-title {
-  font-family: "Anton";
-  letter-spacing: 3px;
-  font-weight: 500;
+/******* Officer's List styles *******/
+
+.officers-list {
+
+
+  & > li {
+    padding: 15px 0 10px;
+    border-bottom: 1px solid lighten($gray, 2%);
+  
+  }
+
+
+  li {
+    display: flex;
+    align-items: base;
+    margin-bottom: 20px;
+
+    .officer-avatar {
+      width: 60px;
+      margin-right: 20px;
+      border-radius: 40px;
+    }
+    
+
+.officer-post {
+  color: #9c9a9a;
+  font-size: .90rem;
 }
 
-.site-name {
-  font-size: 1.2rem;
+
+    .officer-details {
+      width: 100%;
+      line-height: $line-height;
+    
+      .officer-bio {
+        border-top: 1px solid $gray;
+        padding-top: 15px;
+        margin-top: 10px;
+      
+        &.hidden {
+          display: none;
+        }
+        
+      }
+
+      span {
+        display: block;
+        margin-bottom: 7px;  
+      }  
+      
+      
+    }
+
+  }
 }
 
-// List styles
+/************ Task styles ************/
 
-
-.tasks-list li {
-  padding: 20px 0;
-  border-bottom: 1px solid lighten($gray, 2%);
+.tasks-list  {
+  li {
+    padding: 20px 0;
+    border-bottom: 1px solid lighten($gray, 2%);
+  }  
 }
 
-.officers-list > li {
-  padding: 15px 0 10px;
-  border-bottom: 1px solid lighten($gray, 2%);
-
+.tasks-list li,
+.recent-notes li {
+  line-height: $line-height;
 }
 
-.site ul {
-  font-size: .85rem;
+/************ Notes styles ************/
+
+textarea {
+  min-width: 100%;
+  border: 1px solid $gray;
+  padding: 8px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  line-height: $line-height;
+  min-height: 150px;
+  font-weight: bold;
+
+  &:focus {
+    outline: 1px solid darken($gray, 10%);
+  }
 }
 
-// Button styles
+.recent-notes ul li {
+  margin-bottom: 25px;
+}
+
+/******* Topic Generator styles *******/
+
+.security-topic {
+  height: 60px;
+  line-height: $line-height;
+}
+
+/********* Component styles ************/
 
 .savenote-btn,
 .securitytopic-btn {
@@ -196,92 +279,6 @@ section {
   margin: 25px 0;
 }
 
-// Site Status styles
 
-.site {
-  margin-bottom: 25px;
 
-  h3,
-  li {
-    margin-bottom: 10px;
-  }
-}
 
-// Officers styles
-
-.officers-on-shift-number,
-.task-count {
-  font-size: 1.2rem;
-  color: $site-color--offset;
-  margin-left: 3px;
-}
-
-.officer-count {
-  font-weight: 600;
-}
-
-// Tasks
-
-.tasks-list li,
-.recent-notes li {
-  line-height: $line-height;
-}
-
-// Notes styles
-
-textarea {
-  min-width: 100%;
-  border: 1px solid $gray;
-  padding: 8px;
-  font-size: 1rem;
-  font-family: sans-serif;
-  line-height: $line-height;
-
-  &:focus {
-    outline: 1px solid darken($gray, 10%);
-  }
-}
-
-.note-space {
-  min-height: 150px;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.recent-notes ul li {
-  margin-bottom: 25px;
-}
-
-// Topic Generator styles
-
-.security-topic {
-  height: 60px;
-  line-height: $line-height;
-}
-
-@mixin colorArmed($color) {
-  color: $color;
-  padding: 1px 5px;
-  border-radius: 2px;
-  margin-left: 5px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.site-name .armed {
-  @include colorArmed($red);
-}
-
-.site-name .unarmed {
-  @include colorArmed($green);
-}
-
-.site-name {
-  color: $site-color--tertiary;
-  font-weight: 400;
-}
-
-footer {
-  font-size: 0.8rem;
-  padding: 15px 0;
-}
