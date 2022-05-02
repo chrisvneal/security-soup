@@ -8,7 +8,7 @@ import SiteStatus from "./components/SiteStatus";
 import SecurityTopicGenerator from "./components/SecurityTopicGenerator";
 import { officers, supTasks } from "./data";
 
-import "./styles.scss";
+import "./sass/styles.scss";
 
 const App = () => {
   return (
