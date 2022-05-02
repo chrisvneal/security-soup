@@ -10,16 +10,26 @@ const Officers = ({ officers }) => {
     const officerBios = Array.from(
       document.querySelectorAll(".officer-details .officer-bio")
     );
-    officerBios.forEach((item) => {
-      item.classList.add("hidden");
-      // console.log(item)
-    });
+
+    const hideItems = () => {
+      officerBios.forEach((item) => {
+        item.classList.add("hidden");
+        // console.log(item)
+      });
+    };
+    hideItems();
 
     officerListItem.forEach((item) => {
       item.addEventListener("click", (e) => {
         // e.stopPropagation();
         e.stopImmediatePropagation();
-        console.log(e.currentTarget.lastChild.classList);
+
+        // make all bios hidden
+        hideItems();
+
+        e.currentTarget.lastChild.lastChild.classList.remove("hidden");
+        // e.currentTarget.lastChild.classList.toggle("show");
+        // console.log(e.currentTarget.lastChild.lastChild);
       });
     });
 
