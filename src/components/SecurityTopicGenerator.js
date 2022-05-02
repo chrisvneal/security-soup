@@ -3,7 +3,6 @@ import { securityTopics } from "../data";
 
 const SecurityTopicGenerator = () => {
   const [securityTopic, setSecurityTopic] = useState(0);
-  // console.log("current topic: " + currentTopic);
 
   const showNextTopic = () => {
     if (securityTopic === securityTopics.length - 1) {
