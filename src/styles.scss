@@ -95,11 +95,11 @@ section > h2:first-child {
 .officers-list li {
   display: flex;
   align-items: base;
-  // margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .officer-details {
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   line-height: $line-height;
 }
 
