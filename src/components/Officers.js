@@ -21,6 +21,7 @@ const Officers = ({ officers }) => {
 
     hideAllBios();
 
+    // when any officr list item is clicked, toggle its BIO section's visibility
     officerListItem.forEach((item) => {
       item.addEventListener("click", (e) => {
         e.stopImmediatePropagation();
