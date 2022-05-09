@@ -222,6 +222,22 @@ section > h2:first-child {
   line-height: $line-height;
 }
 
+.add-btn {
+  margin-top: 20px;
+  border: 1px solid black;
+  width: 50px;
+  position: relative;
+  float: right;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.tasks {
+  overflow: auto;
+}
+
 /************ Notes styles ************/
 
 textarea {
