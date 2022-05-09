@@ -1,6 +1,9 @@
 import React from "react";
 
 const Tasks = ({ tasks }) => {
+  const displayNewtask = () => {
+    // write code here
+  };
   const taskList = tasks.map((task) => <li key={task.id}>{task.title}</li>);
   return (
     <section className="tasks">
@@ -8,7 +11,7 @@ const Tasks = ({ tasks }) => {
         Tasks: <span className="task-count">{tasks.length}</span>
       </h2>
       <ul className="tasks-list">{taskList}</ul>
-      <div class="add-btn">
+      <div onClick={displayNewtask} class="add-btn">
         <img src="../images/addtask_btn.png" alt="add button" />
       </div>
     </section>
