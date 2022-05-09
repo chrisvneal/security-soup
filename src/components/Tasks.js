@@ -1,4 +1,5 @@
 import React from "react";
+import TaskInput from "./TaskInput";
 
 const Tasks = ({ tasks }) => {
   const displayNewtask = () => {
@@ -11,6 +12,7 @@ const Tasks = ({ tasks }) => {
         Tasks: <span className="task-count">{tasks.length}</span>
       </h2>
       <ul className="tasks-list">{taskList}</ul>
+      <TaskInput />
       <div onClick={displayNewtask} class="add-btn">
         <img src="../images/addtask_btn.png" alt="add button" />
       </div>
