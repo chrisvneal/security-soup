@@ -122,21 +122,22 @@ const Tasks = () => {
 
       <TaskInput />
 
-      <div
-        onClick={() => {
-          toggleTaskInput();
-
-          // focus on input
-          document.querySelector(".task-input input").focus();
-        }}
-        className="add-btn">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/117/117885.png"
-          alt=""
-        />
-      </div>
-      <div className="trash-icon">
-        <img src="./images/delete.png" />
+      <div className="tasks-header">
+        <div
+          onClick={() => {
+            toggleTaskInput();
+            // focus on input
+            document.querySelector(".task-input input").focus();
+          }}
+          className="add-btn">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/117/117885.png"
+            alt=""
+          />
+        </div>
+        <div className="trash-icon">
+          <img src="./images/delete.png" />
+        </div>
       </div>
     </section>
   );

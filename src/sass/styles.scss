@@ -10,6 +10,7 @@ $site-color--offset: #fdb44b;
 $white: #fff;
 $text-color: lighten(black, 5%);
 $text-color--secondary: lighten($text-color, 15%);
+$icon-width_mobile: 35px;
 
 @mixin colorArmed($color) {
   color: $color;
@@ -223,9 +224,9 @@ section > h2:first-child {
 }
 
 .add-btn {
-  margin-top: 20px;
+  // margin-top: 20px;
   // border: 1px solid black;
-  width: 75px;
+  width: $icon-width_mobile;
   position: relative;
   float: right;
 
@@ -234,8 +235,14 @@ section > h2:first-child {
   }
 }
 
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .trash-icon {
-  width: 35px;
+  width: $icon-width_mobile;
 
   img {
     max-width: 100%;
