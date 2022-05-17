@@ -16,66 +16,43 @@ const officers = [
     id: 1,
     post: "Main Lobby",
     avatar: getImage(),
-    bio: faker.lorem.paragraph()
+    bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 2,
     post: "Rear Entrance",
     avatar: getImage(),
-    bio: faker.lorem.paragraph()
+    bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 3,
     post: "Side Gate",
     avatar: getImage(),
-    bio: faker.lorem.paragraph()
+    bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 4,
     post: "5th Floor Entrance",
     avatar: getImage(),
-    bio: faker.lorem.paragraph()
+    bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 5,
     post: "Parking Garage",
     avatar: getImage(),
-    bio: faker.lorem.paragraph()
+    bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 6,
     post: "Sending Room",
     avatar: getImage(),
-    bio: faker.lorem.paragraph()
-  }
-];
-
-const supTasks = [
-  {
-    title: "Tell " + createName() + " to sign paperwork",
-    completed: false,
-    id: 1
+    bio: faker.lorem.paragraph(),
   },
-  {
-    title: "Help Manager with New hire Orientation",
-    completed: false,
-    id: 2
-  },
-  {
-    title: "Establish Training for next 1st Watch Shift",
-    completed: false,
-    id: 3
-  },
-  {
-    title: "Load PPE into back / Admin office with Manager",
-    completed: false,
-    id: 4
-  }
 ];
 
 const securityTopics = [
@@ -84,7 +61,7 @@ const securityTopics = [
   "Responding to critical incidents",
   "Handling Code Red responses, Fire protocols",
   "Greet passengers with respect",
-  "Completing Shift Activity Reports properly"
+  "Completing Shift Activity Reports properly",
 ];
 
 const sites = [
@@ -93,22 +70,22 @@ const sites = [
     supervisor: createName(),
     totalOfficers: 20,
     security: "unarmed",
-    hours: "0600 - 1800"
+    hours: "0600 - 1800",
   },
   {
     site: faker.company.companyName(),
     supervisor: createName(),
     totalOfficers: 13,
     security: "armed",
-    hours: "0430 - 1600"
+    hours: "0430 - 1600",
   },
   {
     site: faker.company.companyName(),
     supervisor: createName(),
     totalOfficers: 13,
     security: "armed",
-    hours: "0430 - 1600"
-  }
+    hours: "0430 - 1600",
+  },
 ];
 
-export { officers, supTasks, securityTopics, sites };
+export { officers, securityTopics, sites };
