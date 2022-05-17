@@ -6,7 +6,7 @@ import SiteHeader from "./components/Site/SiteHeader";
 import SiteFooter from "./components/Site/SiteFooter";
 import SiteStatus from "./components/SiteStatus";
 import SecurityTopicGenerator from "./components/SecurityTopicGenerator";
-import { officers, supTasks } from "./data";
+import { officers } from "./data";
 
 import "./sass/styles.scss";
 
@@ -17,7 +17,7 @@ const App = () => {
       <main>
         <SiteStatus />
         <Officers officers={officers} />
-        <Tasks tasks={supTasks} />
+        <Tasks />
 
         <Notes />
 
