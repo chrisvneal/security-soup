@@ -234,8 +234,20 @@ section > h2:first-child {
   }
 }
 
+.trash-icon {
+  width: 35px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
 .tasks {
   overflow: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 /************ Notes styles ************/
