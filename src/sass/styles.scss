@@ -11,6 +11,7 @@ $white: #fff;
 $text-color: lighten(black, 5%);
 $text-color--secondary: lighten($text-color, 15%);
 $icon-width_mobile: 35px;
+$gray-dark: darken(gray, 25%);
 
 @mixin colorArmed($color) {
   color: $color;
@@ -251,6 +252,22 @@ section > h2:first-child {
 
 .tasks {
   overflow: auto;
+}
+
+.task-input {
+  margin-top: 40px;
+  // width: 300px;
+
+  input {
+    height: 25px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 2px solid black;
+    font-size: 1.2rem;
+    color: $gray-dark;
+    padding-bottom: 4px;
+  }
 }
 
 .hidden {
