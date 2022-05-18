@@ -21,8 +21,6 @@ const Tasks = () => {
         <ul></ul>
       </div>
 
-      <TaskInput />
-
       <div className="tasks-header">
         <div
           onClick={() => {
@@ -40,6 +38,8 @@ const Tasks = () => {
           <img src="./images/delete.png" />
         </div>
       </div>
+
+      <TaskInput />
     </section>
   );
 };
