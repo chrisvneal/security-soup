@@ -114,8 +114,7 @@ const Tasks = () => {
 
   // toggle task input visibility
   const toggleTaskInput = () => {
-    // taskInput.classList.toggle("hidden");
-    console.log("input should be toggled");
+    taskInput.current.classList.toggle("hidden");
   };
 
   // const taskList = tasks.map((task) => <li key={task.id}>{task.title}</li>);
@@ -132,7 +131,6 @@ const Tasks = () => {
         <div
           onClick={() => {
             toggleTaskInput();
-            // focus on input
             inputRef.current.focus();
           }}
           className="add-btn">
@@ -146,7 +144,7 @@ const Tasks = () => {
         </div>
       </div>
 
-      <div ref={taskInput} className="task-input">
+      <div ref={taskInput} className="task-input hidden">
         <input
           onChange={(e) => {
             setTextInput(e.target.value);

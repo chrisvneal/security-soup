@@ -237,6 +237,7 @@ section > h2:first-child {
 }
 
 .tasks-header {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -255,7 +256,7 @@ section > h2:first-child {
 }
 
 .task-input {
-  margin-top: 40px;
+  margin-top: 70px;
   // width: 300px;
 
   input {
@@ -263,7 +264,7 @@ section > h2:first-child {
     border: none;
     outline: none;
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid $gray-dark;
     font-size: 1.2rem;
     color: $gray-dark;
     padding-bottom: 4px;
