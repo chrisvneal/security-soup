@@ -48,9 +48,6 @@ const Tasks = () => {
       return makeTaskListItem(task);
     });
 
-  console.log(tasks);
-  console.log(listUl.current);
-
   const [taskItems, setTaskItems] = useState([...tasks]);
 
   // console.log("task items: " + taskItems);
@@ -73,13 +70,15 @@ const Tasks = () => {
 
   const createTask = (task) => {
     // insert new list itemm into array
-    insertTaskItem(makeTaskListItem(task));
+
+    console.log(task);
+    // insertTaskItem(makeTaskListItem(task));
 
     // append list items to list (show in task list)
-    placeItems();
+    // placeItems();
 
     // clear the field
-    clearInput();
+    // clearInput();
   };
 
   // functions to reset task and empty the list
@@ -100,14 +99,13 @@ const Tasks = () => {
     // Press 'Enter' on input to enter task
     inputRef.current.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
+        // console.log("you hit enter!");
         createTask(e.target.value);
 
         // hide task input
         taskInput.current.classList.add("hidden");
       }
     });
-  } else {
-    console.log("Input element not found!");
   }
 
   if (trashIconRef.current) {
