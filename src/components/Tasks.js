@@ -141,12 +141,12 @@ const Tasks = () => {
             alt=""
           />
         </div>
-        <div ef={trashIconRef} className="trash-icon">
+        <div ref={trashIconRef} className="trash-icon">
           <img src="./images/delete.png" />
         </div>
       </div>
 
-      <div ref={taskInput} className="task-input hidden">
+      <div ref={taskInput} className="task-input">
         <input
           onChange={(e) => {
             setTextInput(e.target.value);
