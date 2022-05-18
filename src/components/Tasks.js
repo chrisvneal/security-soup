@@ -129,7 +129,7 @@ const Tasks = () => {
   return (
     <section className="tasks">
       <h2>
-        Tasks: <span className="task-count">5</span>
+        Tasks: <span className="task-count">{taskItems.length}</span>
       </h2>
       <div className="tasks-list">
         <ul ref={listUl}>{taskItems}</ul>
