@@ -32,9 +32,7 @@ const Tasks = () => {
   const [textInput, setTextInput] = useState("");
   // put an <li></li> around each task string
   const makeTaskListItem = (text) => {
-    const li = document.createElement("li");
-    li.textContent = text;
-    return li;
+    return <li>{text}</li>;
   };
 
   // clear input field
@@ -42,11 +40,20 @@ const Tasks = () => {
     setTextInput("");
   };
 
-  const [taskItems, setTaskItems] = useState(() => {
-    return supTasks.map((task) => {
-      makeTaskListItem(task.title);
+  const tasks = supTasks
+    .map((task) => {
+      return task.title;
+    })
+    .map((task) => {
+      return makeTaskListItem(task);
     });
-  });
+
+  console.log(tasks);
+  console.log(listUl.current);
+
+  const [taskItems, setTaskItems] = useState([...tasks]);
+
+  // console.log("task items: " + taskItems);
   // const taskInput = document.querySelector(".task-input");
 
   // insert task list items in array
@@ -58,8 +65,9 @@ const Tasks = () => {
 
   // appends each task to Tasks List
   const placeItems = () => {
+    // console.log("List: " + listUl);
     taskItems.forEach((task) => {
-      listUl.append(task);
+      listUl.current.append(task);
     });
   };
 
@@ -124,7 +132,7 @@ const Tasks = () => {
         Tasks: <span className="task-count">5</span>
       </h2>
       <div className="tasks-list">
-        <ul ref={listUl}></ul>
+        <ul ref={listUl}>{taskItems}</ul>
       </div>
 
       <div className="tasks-header">
