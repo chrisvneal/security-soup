@@ -241,6 +241,7 @@ section > h2:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
 }
 
 .trash-icon {
@@ -298,7 +299,11 @@ textarea {
 }
 
 .recent-notes ul li {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  background: #fdfcc9;
+  border: 1px solid darken(#fdfcc9, 15%);
+  border-radius: 3px;
+  padding: 8px;
 }
 
 /******* Topic Generator styles *******/
@@ -306,6 +311,7 @@ textarea {
 .security-topic {
   height: 60px;
   line-height: $line-height;
+  font-size: 1.1rem;
 }
 
 /********* Component styles ************/
