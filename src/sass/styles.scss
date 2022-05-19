@@ -10,7 +10,7 @@ $site-color--offset: #fdb44b;
 $white: #fff;
 $text-color: lighten(black, 5%);
 $text-color--secondary: lighten($text-color, 15%);
-$icon-width_mobile: 35px;
+$icon-width_mobile: 60px;
 $gray-dark: darken(gray, 25%);
 
 @mixin colorArmed($color) {
