@@ -35,12 +35,16 @@ const Tasks = () => {
   const makeTaskListItem = (text) => {
     // const li = document.createElement("li");
     // console.log(<li>{text}</li>);
+    let num = Math.floor(Math.random() * 3 + 10);
+    let newNum = Math.floor(Math.random() * 60 + 13);
+    // console.log(num * newNum);
 
-    return <li>{text}</li>;
+    return <li key={num * newNum}>{text}</li>;
   };
 
   // clear input field
   const clearInput = () => {
+    // inputRef.value = "";
     setTextInput("");
   };
 
@@ -50,23 +54,17 @@ const Tasks = () => {
 
   // console.log(tasks);
 
-  const [taskItems, setTaskItems] = useState([...tasks]);
+  const [taskItems, setTaskItems] = useState([]);
 
   // console.log("task items", taskItems);
 
   // insert task list items in array
   const insertTaskItem = (taskItem) => {
-    // console.log(taskItem);
-    // console.log(taskItem);
     setTaskItems([...taskItems, taskItem]);
-    // console.log("task inserted");
   };
 
   const createTask = (task) => {
     // insert new list itemm into array
-    // console.log(task);
-    // console.log(makeTaskListItem(task));
-    // console.log(task);
     insertTaskItem(makeTaskListItem(task));
 
     // append list items to list (show in task list)
@@ -85,17 +83,16 @@ const Tasks = () => {
           // console.log(e.target.value);
           createTask(e.target.value);
 
-          // const li = document.createElement("li");
-          // li.append(e.target.value);
-          // li.setAttribute("key", 34);
-          // console.log(li);
-
           // hide task input
-          // taskInput.current.classList.add("hidden");
+          taskInput.current.classList.add("hidden");
         }
       });
     }
-  });
+
+    return () => {
+      clearInput();
+    };
+  }, [taskItems]);
 
   // console.log("task items: " + taskItems);
   // const taskInput = document.querySelector(".task-input");
