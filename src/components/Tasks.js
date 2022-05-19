@@ -1,28 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-// import { lazy } from "react/cjs/react.production.min";
-
-const supTasks = [
-  {
-    title: "Tell Jim to sign paperwork",
-    completed: false,
-    id: 1,
-  },
-  {
-    title: "Help Manager with New hire Orientation",
-    completed: false,
-    id: 2,
-  },
-  {
-    title: "Establish Training for next 1st Watch Shift",
-    completed: false,
-    id: 3,
-  },
-  {
-    title: "Load PPE into back / Admin office with Manager",
-    completed: false,
-    id: 4,
-  },
-];
 
 const Tasks = () => {
   const listUl = useRef();
@@ -31,48 +7,24 @@ const Tasks = () => {
   const trashIconRef = useRef();
 
   const [textInput, setTextInput] = useState("");
+
   // put an <li></li> around each task string
   const makeTaskListItem = (text) => {
-    // const li = document.createElement("li");
-    // console.log(<li>{text}</li>);
     let num = Math.floor(Math.random() * 3 + 10);
     let newNum = Math.floor(Math.random() * 60 + 13);
-    // console.log(num * newNum);
 
     return <li key={num * newNum}>{text}</li>;
   };
 
   // clear input field
-  const clearInput = () => {
-    // inputRef.value = "";
-    setTextInput("");
-  };
-
-  const tasks = supTasks.map((task) => {
-    return makeTaskListItem(task.title);
-  });
-
-  // console.log(tasks);
+  const clearInput = () => setTextInput("");
 
   const [taskItems, setTaskItems] = useState([]);
 
-  // console.log("task items", taskItems);
-
   // insert task list items in array
-  const insertTaskItem = (taskItem) => {
-    setTaskItems([...taskItems, taskItem]);
-  };
+  const insertTaskItem = (taskItem) => setTaskItems([...taskItems, taskItem]);
 
-  const createTask = (task) => {
-    // insert new list itemm into array
-    insertTaskItem(makeTaskListItem(task));
-
-    // append list items to list (show in task list)
-    // placeItems();
-
-    // clear the field
-    // clearInput();
-  };
+  const createTask = (task) => insertTaskItem(makeTaskListItem(task));
 
   useEffect(() => {
     if (inputRef.current) {
@@ -94,20 +46,9 @@ const Tasks = () => {
     };
   }, [taskItems]);
 
-  // console.log("task items: " + taskItems);
-  // const taskInput = document.querySelector(".task-input");
-
-  // appends each task to Tasks List
-  const placeItems = () => {
-    // console.log("List: " + listUl);
-    taskItems.forEach((task) => {
-      listUl.current.append(task);
-    });
-  };
-
   // functions to reset task and empty the list
   const resetTasks = () => {
-    // taskItems = [];
+    console.log("reset tasks");
     setTaskItems([]);
   };
 
@@ -126,15 +67,11 @@ const Tasks = () => {
     });
   }
 
-  // store all tasks in list items
-  // let taskItems = [];
-
   // toggle task input visibility
   const toggleTaskInput = () => {
     taskInput.current.classList.toggle("hidden");
   };
 
-  // const taskList = tasks.map((task) => <li key={task.id}>{task.title}</li>);
   return (
     <section className="tasks">
       <h2>
