@@ -60,8 +60,9 @@ const Tasks = () => {
     );
   };
 
-  if (trashIconRef.current) {
+  if (taskItems.length > 0) {
     trashIconRef.current.addEventListener("click", () => {
+      // console.log("reset");
       resetTasks();
       emptyList();
     });
