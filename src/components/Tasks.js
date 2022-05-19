@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+// import { lazy } from "react/cjs/react.production.min";
 
 const supTasks = [
   {
@@ -32,6 +33,9 @@ const Tasks = () => {
   const [textInput, setTextInput] = useState("");
   // put an <li></li> around each task string
   const makeTaskListItem = (text) => {
+    // const li = document.createElement("li");
+    // console.log(<li>{text}</li>);
+
     return <li>{text}</li>;
   };
 
@@ -40,25 +44,61 @@ const Tasks = () => {
     setTextInput("");
   };
 
-  const tasks = supTasks
-    .map((task) => {
-      return task.title;
-    })
-    .map((task) => {
-      return makeTaskListItem(task);
-    });
+  const tasks = supTasks.map((task) => {
+    return makeTaskListItem(task.title);
+  });
+
+  // console.log(tasks);
 
   const [taskItems, setTaskItems] = useState([...tasks]);
 
-  // console.log("task items: " + taskItems);
-  // const taskInput = document.querySelector(".task-input");
+  // console.log("task items", taskItems);
 
   // insert task list items in array
   const insertTaskItem = (taskItem) => {
-    // taskItems.push(taskItem);
-
-    setTaskItems(...taskItems, taskItem);
+    // console.log(taskItem);
+    // console.log(taskItem);
+    setTaskItems([...taskItems, taskItem]);
+    // console.log("task inserted");
   };
+
+  const createTask = (task) => {
+    // insert new list itemm into array
+    // console.log(task);
+    // console.log(makeTaskListItem(task));
+    // console.log(task);
+    insertTaskItem(makeTaskListItem(task));
+
+    // append list items to list (show in task list)
+    // placeItems();
+
+    // clear the field
+    // clearInput();
+  };
+
+  useEffect(() => {
+    if (inputRef.current) {
+      // console.dir(inputRef.current);
+      // Press 'Enter' on input to enter task
+      inputRef.current.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          // console.log(e.target.value);
+          createTask(e.target.value);
+
+          // const li = document.createElement("li");
+          // li.append(e.target.value);
+          // li.setAttribute("key", 34);
+          // console.log(li);
+
+          // hide task input
+          // taskInput.current.classList.add("hidden");
+        }
+      });
+    }
+  });
+
+  // console.log("task items: " + taskItems);
+  // const taskInput = document.querySelector(".task-input");
 
   // appends each task to Tasks List
   const placeItems = () => {
@@ -66,19 +106,6 @@ const Tasks = () => {
     taskItems.forEach((task) => {
       listUl.current.append(task);
     });
-  };
-
-  const createTask = (task) => {
-    // insert new list itemm into array
-
-    console.log(task);
-    // insertTaskItem(makeTaskListItem(task));
-
-    // append list items to list (show in task list)
-    // placeItems();
-
-    // clear the field
-    // clearInput();
   };
 
   // functions to reset task and empty the list
@@ -95,25 +122,12 @@ const Tasks = () => {
   //   );
   // };
 
-  if (inputRef.current) {
-    // Press 'Enter' on input to enter task
-    inputRef.current.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        // console.log("you hit enter!");
-        createTask(e.target.value);
-
-        // hide task input
-        taskInput.current.classList.add("hidden");
-      }
-    });
-  }
-
-  if (trashIconRef.current) {
-    trashIconRef.current.addEventListener("click", () => {
-      resetTasks();
-      emptyList();
-    });
-  }
+  // if (trashIconRef.current) {
+  //   trashIconRef.current.addEventListener("click", () => {
+  //     resetTasks();
+  //     emptyList();
+  //   });
+  // }
 
   // store all tasks in list items
   // let taskItems = [];
