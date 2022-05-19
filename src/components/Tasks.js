@@ -111,20 +111,20 @@ const Tasks = () => {
     setTaskItems([]);
   };
 
-  // const emptyList = () => {
-  //   Array.from(document.querySelectorAll(".task-list ul li")).forEach(
-  //     (item) => {
-  //       item.remove();
-  //     }
-  //   );
-  // };
+  const emptyList = () => {
+    Array.from(document.querySelectorAll(".task-list ul li")).forEach(
+      (item) => {
+        item.remove();
+      }
+    );
+  };
 
-  // if (trashIconRef.current) {
-  //   trashIconRef.current.addEventListener("click", () => {
-  //     resetTasks();
-  //     emptyList();
-  //   });
-  // }
+  if (trashIconRef.current) {
+    trashIconRef.current.addEventListener("click", () => {
+      resetTasks();
+      emptyList();
+    });
+  }
 
   // store all tasks in list items
   // let taskItems = [];
