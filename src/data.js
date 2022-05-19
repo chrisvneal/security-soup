@@ -7,7 +7,8 @@ const createName = () => {
 };
 
 const getImage = () => {
-  return "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
+  // return "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
+  return "/images/avatars/avatar-1.png";
 };
 
 const officers = [
