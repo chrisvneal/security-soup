@@ -6,9 +6,10 @@ const createName = () => {
   return first + " " + last;
 };
 
-const getImage = () => {
+const generateImage = () => {
   // return "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
-  return "/images/avatars/avatar-1.png";
+  const num = Math.floor(Math.random() * 8 + 1);
+  return `/images/avatars/avatar-${num}.png`;
 };
 
 const officers = [
@@ -16,42 +17,42 @@ const officers = [
     name: createName(),
     id: 1,
     post: "Main Lobby",
-    avatar: getImage(),
+    avatar: generateImage(),
     bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 2,
     post: "Rear Entrance",
-    avatar: getImage(),
+    avatar: generateImage(),
     bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 3,
     post: "Side Gate",
-    avatar: getImage(),
+    avatar: generateImage(),
     bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 4,
     post: "5th Floor Entrance",
-    avatar: getImage(),
+    avatar: generateImage(),
     bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 5,
     post: "Parking Garage",
-    avatar: getImage(),
+    avatar: generateImage(),
     bio: faker.lorem.paragraph(),
   },
   {
     name: createName(),
     id: 6,
     post: "Sending Room",
-    avatar: getImage(),
+    avatar: generateImage(),
     bio: faker.lorem.paragraph(),
   },
 ];
